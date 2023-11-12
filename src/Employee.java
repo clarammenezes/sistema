@@ -1,9 +1,9 @@
 public class Employee {
     public String verifyBookAvailability(Book book) {
         if (book.getAvailability()) {
-            return "esta disponivel";
+            return "está disponível";
         }
-        return "esta alugado";
+        return "está alugado";
     }
 
     public String alugar(Book book) {
@@ -26,7 +26,6 @@ public class Employee {
         if (book.getAvailability() == newAvailability) {
             return false;
         }
-        var result = book.setAvailability(newAvailability);
-        return result;
+        return book.setAvailability(newAvailability);
     }
 }
